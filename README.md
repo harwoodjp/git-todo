@@ -1,6 +1,6 @@
 ## Summary
 
-Loops through a git repository's log of modified files and history, prints "TODO" statements with file name and line number
+Loops through git repo's changelog, filters by author, and prints "TODO" statements with file name and line number
 
 ## Dependencies
 

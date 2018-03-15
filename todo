@@ -1,0 +1,11 @@
+for i in $(git ls-files -m); do
+  if [[ $(/usr/local/Cellar/ack/2.22/bin/ack -s "TODO" $i) = *"TODO"* ]]; then
+    /usr/local/Cellar/ack/2.22/bin/ack -H --java --jsp --xml "TODO" $i 
+  fi
+done
+
+for i in $(git log --no-merges --author="Justin Harwood" --name-only --pretty=format:"" | sort -u); do
+  if [[ $(/usr/local/Cellar/ack/2.22/bin/ack -s "TODO" $i) = *"TODO"* ]]; then
+    /usr/local/Cellar/ack/2.22/bin/ack -H --java --jsp --xml "TODO" $i 
+  fi
+done
